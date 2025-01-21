@@ -27,6 +27,11 @@
 		<button onclick="makeCommand()">Generate</button>
 		<button onclick="copyToClipboard()">Copy</button><br><br>
 
+		<div class="options">
+
+
+		</div><!-- .option -->
+
 	</div><!-- .container -->
 
 </body>
