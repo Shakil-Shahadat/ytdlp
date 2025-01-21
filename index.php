@@ -47,6 +47,10 @@
 			<button onclick="pasteMe()">Paste</button>
 			<br><br>
 
+			<label for="skipDownload">
+				<input type="checkbox" class="skipDownload" id="skipDownload" checked> Skip Download
+			</label><br>
+
 		</div><!-- .option -->
 
 	</div><!-- .container -->
