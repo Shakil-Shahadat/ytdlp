@@ -29,6 +29,11 @@
 
 		<div class="options">
 
+			<h3>Video Link</h3>
+
+			<input type="url" class="videoLink" size="80" placeholder="Enter video link">
+			<button onclick="pasteMe()">Paste</button>
+			<br><br>
 
 		</div><!-- .option -->
 
