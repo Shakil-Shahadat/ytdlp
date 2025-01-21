@@ -23,6 +23,10 @@
 
 	<div class="container">
 
+		<textarea class="finalCommand" cols="80" rows="5"></textarea><br>
+		<button onclick="makeCommand()">Generate</button>
+		<button onclick="copyToClipboard()">Copy</button><br><br>
+
 	</div><!-- .container -->
 
 </body>
