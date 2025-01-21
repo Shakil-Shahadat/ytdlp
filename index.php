@@ -72,6 +72,41 @@
 		return document.querySelector( cls );
 	}
 
+	function makeCommand()
+	{
+		let cmnd = 'yt-dlp ';
+
+		// Get link
+		if ( qs( '.videoLink' ).value === '' )
+		{
+			alert( 'Please enter a video URL.' );
+			qs( '.videoLink' ).focus();
+			return;
+		}
+		else
+		{
+			cmnd += qs( '.videoLink' ).value;
+		}
+
+		// Get skip download status
+		if ( qs( '.skipDownload' ).checked === true )
+		{
+			cmnd += ' --skip-download';
+		}
+
+		// Get subtitle type
+		if ( qs( 'input[name="subtitleType"]:checked' ).value === 'Normal' )
+		{
+			cmnd += ' --write-subs';
+		}
+		else
+		{
+			cmnd += ' --write-auto-subs';
+		}
+
+		// Set command
+		qs( '.finalCommand' ).value = cmnd;
+	}
 </script>
 </body>
 </html>
