@@ -17,6 +17,18 @@
 			margin: auto;
 			margin-top: 20px;
 		}
+		textarea, input[type=url]
+		{
+			border: 1px solid #d9d9d9;
+			font-size: 20px;
+			padding: 9px;
+		}
+		textarea:focus, input[type=url]:focus
+		{
+			border-color: rgba( 82, 168, 236, 0.8 );
+			box-shadow: 0 0 6px rgba( 102, 175, 233, .6 );
+			outline: 0;
+		}
 	</style>
 </head>
 <body>
