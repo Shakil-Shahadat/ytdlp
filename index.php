@@ -51,6 +51,16 @@
 				<input type="checkbox" class="skipDownload" id="skipDownload" checked> Skip Download
 			</label><br>
 
+			<h3>Subtitle Type</h3>
+
+			<label for="subTypeNormal">
+				<input type="radio" id="subTypeNormal" name="subtitleType" value="Normal"> Normal
+			</label><br>
+
+			<label for="subTypeAuto">
+				<input type="radio" id="subTypeAuto" name="subtitleType" value="Auto" checked> Auto
+			</label><br>
+
 		</div><!-- .option -->
 
 	</div><!-- .container -->
