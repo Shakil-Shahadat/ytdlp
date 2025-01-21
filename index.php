@@ -107,6 +107,11 @@
 		// Set command
 		qs( '.finalCommand' ).value = cmnd;
 	}
+
+	function copyToClipboard()
+	{
+		navigator.clipboard.writeText( qs( '.finalCommand' ).value );
+	}
 </script>
 </body>
 </html>
