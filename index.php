@@ -112,6 +112,12 @@
 	{
 		navigator.clipboard.writeText( qs( '.finalCommand' ).value );
 	}
+
+	async function pasteMe()
+	{
+		qs( '.videoLink' ).value = await navigator.clipboard.readText();
+	}
+
 </script>
 </body>
 </html>
