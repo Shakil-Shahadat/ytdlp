@@ -65,5 +65,13 @@
 
 	</div><!-- .container -->
 
+<script>
+
+	function qs( cls )
+	{
+		return document.querySelector( cls );
+	}
+
+</script>
 </body>
 </html>
