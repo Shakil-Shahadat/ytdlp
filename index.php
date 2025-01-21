@@ -11,6 +11,12 @@
 			font-family: 'Segoe UI', Verdana, Arial, Helvetica, sans-serif;
 			line-height: 26px;
 		}
+		.container
+		{
+			width: 960px;
+			margin: auto;
+			margin-top: 20px;
+		}
 	</style>
 </head>
 <body>
