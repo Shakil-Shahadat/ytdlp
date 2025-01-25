@@ -98,6 +98,12 @@
 			cmnd += qs( '.videoLink' ).value;
 		}
 
+		// Get update status
+		if ( qs( '.update' ).checked === true )
+		{
+			cmnd += ' -U';
+		}
+
 		// Get skip download status
 		if ( qs( '.skipDownload' ).checked === true )
 		{
