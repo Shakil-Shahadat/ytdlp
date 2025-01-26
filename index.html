@@ -138,6 +138,56 @@
 		{
 			cmnd += ' -U';
 		}
+		else if ( qs( '[name="updateType"]:checked' ).value === 'Specific' )
+		{
+			cmnd += ' --update-to';
+
+			if ( qs( '#updateChannel' ).value === 'none' )
+			{
+				if ( qs( '#updateTag' ).value !== '' )
+				{
+					cmnd += ' ' + qs( '#updateTag' ).value;
+				}
+				else
+				{
+					alert( 'Please specify at least a channel or a tag.' );
+					qs( '#updateTag' ).focus();
+					return;
+				}
+			}
+			else if ( qs( '#updateChannel' ).value === 'stable' )
+			{
+				cmnd += ' stable';
+				if ( qs( '#updateTag' ).value !== '' )
+				{
+					cmnd += '@' + qs( '#updateTag' ).value;
+				}
+			}
+			else
+			{
+				cmnd += ' ' + qs( '#updateChannel' ).value;
+			}
+		}
+		else if ( qs( '[name="updateType"]:checked' ).value === 'Repository' )
+		{
+			cmnd += ' --update-to';
+
+			if ( qs( '#updateRepo' ).value !== '' )
+			{
+				cmnd += ' ' + qs( '#updateRepo' ).value;
+
+				if ( qs( '#updateTag' ).value !== '' )
+				{
+					cmnd += '@' + qs( '#updateTag' ).value;
+				}
+			}
+			else
+			{
+				alert( 'Please specify a repository.' );
+				qs( '#updateRepo' ).focus();
+				return;
+			}
+		}
 
 		// Get skip download status
 		if ( qs( '.skipDownload' ).checked === true )
