@@ -134,7 +134,7 @@
 		}
 
 		// Get update status
-		if ( qs( '.update' ).checked === true )
+		if ( qs( '[name="updateType"]:checked' ).value === 'Normal' )
 		{
 			cmnd += ' -U';
 		}
