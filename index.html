@@ -208,7 +208,7 @@
 		{
 			cmnd += ' --write-subs';
 		}
-		else
+		else if ( qs( 'input[name="subtitleType"]:checked' ).value === 'Auto' )
 		{
 			cmnd += ' --write-auto-subs';
 		}
