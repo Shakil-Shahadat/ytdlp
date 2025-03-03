@@ -135,26 +135,19 @@
 	{
 		let cmnd = 'yt-dlp ';
 
-		// Get link
-		if ( qs( '.videoLink' ).value === '' )
-		{
-			alert( 'Please enter a video URL.' );
-			qs( '.videoLink' ).focus();
-			return;
-		}
-		else
-		{
-			cmnd += qs( '.videoLink' ).value;
-		}
-
 		// Get update status
 		if ( qs( '[name="updateType"]:checked' ).value === 'Normal' )
 		{
-			cmnd += ' -U';
+			cmnd += '-U';
+
+			// Set command
+			qs( '.finalCommand' ).value = cmnd;
+			qs( '.finalCommand' ).focus();
+			return;
 		}
 		else if ( qs( '[name="updateType"]:checked' ).value === 'Specific' )
 		{
-			cmnd += ' --update-to';
+			cmnd += '--update-to';
 
 			if ( qs( '#updateChannel' ).value === 'none' )
 			{
@@ -181,10 +174,15 @@
 			{
 				cmnd += ' ' + qs( '#updateChannel' ).value;
 			}
+
+			// Set command
+			qs( '.finalCommand' ).value = cmnd;
+			qs( '.finalCommand' ).focus();
+			return;
 		}
 		else if ( qs( '[name="updateType"]:checked' ).value === 'Repository' )
 		{
-			cmnd += ' --update-to';
+			cmnd += '--update-to';
 
 			if ( qs( '#updateRepo' ).value !== '' )
 			{
@@ -201,6 +199,23 @@
 				qs( '#updateRepo' ).focus();
 				return;
 			}
+
+			// Set command
+			qs( '.finalCommand' ).value = cmnd;
+			qs( '.finalCommand' ).focus();
+			return;
+		}
+
+		// Get link
+		if ( qs( '.videoLink' ).value === '' )
+		{
+			alert( 'Please enter a video URL.' );
+			qs( '.videoLink' ).focus();
+			return;
+		}
+		else
+		{
+			cmnd += qs( '.videoLink' ).value;
 		}
 
 		// Get skip download status
