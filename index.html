@@ -213,11 +213,11 @@
 		}
 
 		// Get subtitle type
-		if ( qs( 'input[name="subtitleType"]:checked' ).value === 'Normal' )
+		if ( qs( '#subtitleType' ).value === 'Normal' )
 		{
 			cmnd += ' --write-subs';
 		}
-		else if ( qs( 'input[name="subtitleType"]:checked' ).value === 'Auto' )
+		else if ( qs( '#subtitleType' ).value === 'Auto' )
 		{
 			cmnd += ' --write-auto-subs';
 		}
