@@ -128,7 +128,7 @@
 		let cmnd = 'yt-dlp ';
 
 		// Get update status
-		if ( qs( '[name="updateType"]:checked' ).value === 'Normal' )
+		if ( qs( '#updateType' ).value === 'Normal' )
 		{
 			cmnd += '-U';
 
@@ -137,7 +137,7 @@
 			qs( '.finalCommand' ).focus();
 			return;
 		}
-		else if ( qs( '[name="updateType"]:checked' ).value === 'Specific' )
+		else if ( qs( '#updateType' ).value === 'Specific' )
 		{
 			cmnd += '--update-to';
 
@@ -172,7 +172,7 @@
 			qs( '.finalCommand' ).focus();
 			return;
 		}
-		else if ( qs( '[name="updateType"]:checked' ).value === 'Repository' )
+		else if ( qs( '#updateType' ).value === 'Repository' )
 		{
 			cmnd += '--update-to';
 
