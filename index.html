@@ -51,22 +51,14 @@
 
 				<h3>Update</h3>
 
-				<label for="updateNone">
-					<input type="radio" name="updateType" id="updateNone" value="None" checked> None
-				</label>
-
-				<label for="updateNormal">
-					<input type="radio" name="updateType" id="updateNormal" value="Normal"> Normal
-				</label>
-
-				<label for="updateSpecific">
-					<input type="radio" name="updateType" id="updateSpecific" value="Specific">
-					Update to a Specific Channel / Tag
-				</label>
-
-				<label for="updateRepository">
-					<input type="radio" name="updateType" id="updateRepository" value="Repository">
-					Update from another repository
+				<label for="updateType">
+					Update Type
+					<select id="updateType">
+						<option value="none">None</option>
+						<option value="Normal">Normal</option>
+						<option value="Specific">Update to a Specific Channel / Tag</option>
+						<option value="Repository">Update from another repository</option>
+					</select>
 				</label><br>
 
 				<label for="updateChannel">
