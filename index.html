@@ -242,9 +242,16 @@
 		}
 		else if ( val === 'Specific' )
 		{
-			// Disable 3, enable 1, 2
+			// Disable 3, enable 1, conditional 2
 			qs( '#updateChannel' ).removeAttribute( 'disabled' );
-			qs( '.updateTag' ).removeAttribute( 'disabled' );
+			if ( qs( '#updateChannel' ).value === 'none' || qs( '#updateChannel' ).value === 'stable' )
+			{
+				qs( '.updateTag' ).removeAttribute( 'disabled' );
+			}
+			else
+			{
+				qs( '.updateTag' ).setAttribute( 'disabled', '' );
+			}
 			qs( '.updateRepo' ).setAttribute( 'disabled', '' );
 		}
 		else if ( val === 'Repository' )
