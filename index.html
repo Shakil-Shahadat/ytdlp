@@ -256,6 +256,27 @@
 		}
 	} // updateFunc() ends
 
+	function updateChannelFunc( val )
+	{
+		// console.log( val );
+		if ( val === 'none' )
+		{
+			qs( '.updateTag' ).removeAttribute( 'disabled' );
+		}
+		else if ( val === 'stable' )
+		{
+			qs( '.updateTag' ).removeAttribute( 'disabled' );
+		}
+		else if ( val === 'nightly' )
+		{
+			qs( '.updateTag' ).setAttribute( 'disabled', '' );
+		}
+		else if ( val === 'master' )
+		{
+			qs( '.updateTag' ).setAttribute( 'disabled', '' );
+		}
+	} // updateChannelFunc() ends
+
 </script>
 </body>
 </html>
