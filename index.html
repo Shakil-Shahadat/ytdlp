@@ -224,6 +224,38 @@
 		qs( '.videoLink' ).value = await navigator.clipboard.readText();
 	}
 
+	function updateFunc( val )
+	{
+		if ( val === 'none' )
+		{
+			// Disable all 3
+			qs( '#updateChannel' ).setAttribute( 'disabled', '' );
+			qs( '.updateTag' ).setAttribute( 'disabled', '' );
+			qs( '.updateRepo' ).setAttribute( 'disabled', '' );
+		}
+		else if ( val === 'Normal' )
+		{
+			// Disable all 3
+			qs( '#updateChannel' ).setAttribute( 'disabled', '' );
+			qs( '.updateTag' ).setAttribute( 'disabled', '' );
+			qs( '.updateRepo' ).setAttribute( 'disabled', '' );
+		}
+		else if ( val === 'Specific' )
+		{
+			// Disable 3, enable 1, 2
+			qs( '#updateChannel' ).removeAttribute( 'disabled' );
+			qs( '.updateTag' ).removeAttribute( 'disabled' );
+			qs( '.updateRepo' ).setAttribute( 'disabled', '' );
+		}
+		else if ( val === 'Repository' )
+		{
+			// Disable 1,2, enable 3
+			qs( '#updateChannel' ).setAttribute( 'disabled', '' );
+			qs( '.updateTag' ).setAttribute( 'disabled', '' );
+			qs( '.updateRepo' ).removeAttribute( 'disabled' );
+		}
+	} // updateFunc() ends
+
 </script>
 </body>
 </html>
