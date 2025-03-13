@@ -251,7 +251,7 @@
 		{
 			// Disable 1,2, enable 3
 			qs( '#updateChannel' ).setAttribute( 'disabled', '' );
-			qs( '.updateTag' ).setAttribute( 'disabled', '' );
+			qs( '.updateTag' ).removeAttribute( 'disabled' );
 			qs( '.updateRepo' ).removeAttribute( 'disabled' );
 		}
 	} // updateFunc() ends
