@@ -159,9 +159,9 @@
 		{
 			cmnd += '--update-to';
 
-			if ( qs( '#updateRepo' ).value !== '' )
+			if ( qs( '.updateRepo' ).value !== '' )
 			{
-				cmnd += ' ' + qs( '#updateRepo' ).value;
+				cmnd += ' ' + qs( '.updateRepo' ).value;
 
 				if ( qs( '.updateTag' ).value !== '' )
 				{
@@ -171,7 +171,7 @@
 			else
 			{
 				alert( 'Please specify a repository.' );
-				qs( '#updateRepo' ).focus();
+				qs( '.updateRepo' ).focus();
 				return;
 			}
 
