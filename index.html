@@ -39,7 +39,7 @@
 
 				<label for="updateType">
 					Update Type
-					<select class="form-select mb-3" id="updateType">
+					<select onchange="updateFunc( this.value )" class="form-select mb-3" id="updateType">
 						<option value="none">None</option>
 						<option value="Normal">Normal</option>
 						<option value="Specific">Update to a Specific Channel / Tag</option>
