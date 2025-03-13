@@ -126,14 +126,14 @@
 
 			if ( qs( '#updateChannel' ).value === 'none' )
 			{
-				if ( qs( '#updateTag' ).value !== '' )
+				if ( qs( '.updateTag' ).value !== '' )
 				{
-					cmnd += ' ' + qs( '#updateTag' ).value;
+					cmnd += ' ' + qs( '.updateTag' ).value;
 				}
 				else
 				{
 					alert( 'Please specify at least a channel or a tag.' );
-					qs( '#updateTag' ).focus();
+					qs( '.updateTag' ).focus();
 					return;
 				}
 			}
