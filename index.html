@@ -49,7 +49,7 @@
 
 				<label for="updateChannel">
 					Update Channel
-					<select name="updateChannel" class="form-select" id="updateChannel" disabled>
+					<select onchange="updateChannelFunc( this.value )" name="updateChannel" class="form-select" id="updateChannel" disabled>
 						<option value="none">None</option>
 						<option value="stable">Stable</option>
 						<option value="nightly">Nightly</option>
