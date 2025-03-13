@@ -140,9 +140,9 @@
 			else if ( qs( '#updateChannel' ).value === 'stable' )
 			{
 				cmnd += ' stable';
-				if ( qs( '#updateTag' ).value !== '' )
+				if ( qs( '.updateTag' ).value !== '' )
 				{
-					cmnd += '@' + qs( '#updateTag' ).value;
+					cmnd += '@' + qs( '.updateTag' ).value;
 				}
 			}
 			else
@@ -163,9 +163,9 @@
 			{
 				cmnd += ' ' + qs( '#updateRepo' ).value;
 
-				if ( qs( '#updateTag' ).value !== '' )
+				if ( qs( '.updateTag' ).value !== '' )
 				{
-					cmnd += '@' + qs( '#updateTag' ).value;
+					cmnd += '@' + qs( '.updateTag' ).value;
 				}
 			}
 			else
