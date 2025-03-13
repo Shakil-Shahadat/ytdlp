@@ -41,7 +41,7 @@
 					Update Type
 					<select onchange="updateFunc( this.value )" class="form-select mb-3" id="updateType">
 						<option value="none">None</option>
-						<option value="Normal">Normal</option>
+						<option value="Release">Release</option>
 						<option value="Specific">Update to a Specific Channel / Tag</option>
 						<option value="Repository">Update from a repository</option>
 					</select>
@@ -111,7 +111,7 @@
 		let cmnd = 'yt-dlp ';
 
 		// Get update status
-		if ( qs( '#updateType' ).value === 'Normal' )
+		if ( qs( '#updateType' ).value === 'Release' )
 		{
 			cmnd += '-U';
 
@@ -233,7 +233,7 @@
 			qs( '.updateTag' ).setAttribute( 'disabled', '' );
 			qs( '.updateRepo' ).setAttribute( 'disabled', '' );
 		}
-		else if ( val === 'Normal' )
+		else if ( val === 'Release' )
 		{
 			// Disable all 3
 			qs( '#updateChannel' ).setAttribute( 'disabled', '' );
