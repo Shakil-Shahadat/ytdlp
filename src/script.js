@@ -124,6 +124,7 @@ function copyToClipboard()
 async function pasteMe()
 {
 	qs( '.videoLink' ).value = await navigator.clipboard.readText();
+	qs( '.videoLink' ).focus();
 }
 
 function updateFunc( val )
