@@ -94,6 +94,17 @@ function makeCommand()
 		return;
 	}
 
+	// Get help status
+	if ( qs( '.generalVersion' ).checked === true )
+	{
+		cmnd += ' --version';
+
+		// Set command
+		qs( '.finalCommand' ).value = cmnd;
+		qs( '.finalCommand' ).focus();
+		return;
+	}
+
 	// Get link
 	if ( qs( '.videoLink' ).value === '' )
 	{
