@@ -94,7 +94,7 @@ function makeCommand()
 		return;
 	}
 
-	// Get help status
+	// Get version status
 	if ( qs( '.generalVersion' ).checked === true )
 	{
 		cmnd += ' --version';
