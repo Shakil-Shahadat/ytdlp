@@ -83,6 +83,17 @@ function makeCommand()
 		return;
 	}
 
+	// Get help status
+	if ( qs( '.generalHelp' ).checked === true )
+	{
+		cmnd += ' --help';
+
+		// Set command
+		qs( '.finalCommand' ).value = cmnd;
+		qs( '.finalCommand' ).focus();
+		return;
+	}
+
 	// Get link
 	if ( qs( '.videoLink' ).value === '' )
 	{
