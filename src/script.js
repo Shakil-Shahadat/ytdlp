@@ -117,6 +117,12 @@ function makeCommand()
 		cmnd += qs( '.videoLink' ).value;
 	}
 
+	// Get ignore error status
+	if ( qs( '.generalIgnoreErrors' ).checked === true )
+	{
+		cmnd += ' --ignore-errors';
+	}
+
 	// Get skip download status
 	if ( qs( '.skipDownload' ).checked === true )
 	{
